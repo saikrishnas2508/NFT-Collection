@@ -17,7 +17,7 @@ export default function Home() {
 
   const [isOwner, setIsOwner] = useState(false);
 
-  const [tokenIdsMinted, settokenIdsMinted] = useState("0");
+  const [tokenIdsMinted, setTokenIdsMinted] = useState("0");
 
   const web3ModalRef = useRef();
 
@@ -169,7 +169,7 @@ export default function Home() {
     }
   };
 
-  const getProviderOrSigner	= async (needSigner = flase) => {
+  const getProviderOrSigner	= async (needSigner = false) => {
 
     const provider = await web3ModalRef.current.connect();
     const web3Provider = new providers.Web3Provider(provider);
